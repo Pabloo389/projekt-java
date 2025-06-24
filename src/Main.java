@@ -10,7 +10,8 @@ public class Main {
             System.out.println("\n=== MENU ===");
             System.out.println("1. Start");
             System.out.println("2. Pomoc");
-            System.out.println("3. Wyjście");
+            System.out.println("3. O programie");
+            System.out.println("4. Wyjście");
             System.out.print("Wybierz opcję: ");
 
             int choice = scanner.nextInt();
@@ -22,7 +23,10 @@ public class Main {
                 case 2:
                     System.out.println("Pomoc techniczna zostanie wkrótce dodana.");
                     break;
-                case 3:
+		case 3:
+    		    System.out.println("To jest przykładowa aplikacja w Javie.");
+    		    break;
+                case 4:
                     System.out.println("Do widzenia!");
                     running = false;
                     break;
