@@ -20,7 +20,7 @@ public class Main {
                     System.out.println("Uruchamianie aplikacji...");
                     break;
                 case 2:
-                    System.out.println("Tutaj będzie pomoc.");
+                    System.out.println("Pomoc techniczna zostanie wkrótce dodana.");
                     break;
                 case 3:
                     System.out.println("Do widzenia!");
