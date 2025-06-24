@@ -1,10 +1,35 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, GitHub!");
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
 
-	System.out.println("Nowa funkcjonalność.");
+        while (running) {
+            System.out.println("\n=== MENU ===");
+            System.out.println("1. Start");
+            System.out.println("2. Pomoc");
+            System.out.println("3. Wyjście");
+            System.out.print("Wybierz opcję: ");
 
-	System.out.println("Dodano jeszcze jedną funkcjonalność.");
+            int choice = scanner.nextInt();
 
+            switch (choice) {
+                case 1:
+                    System.out.println("Uruchamianie aplikacji...");
+                    break;
+                case 2:
+                    System.out.println("Tutaj będzie pomoc.");
+                    break;
+                case 3:
+                    System.out.println("Do widzenia!");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Nieprawidłowa opcja, spróbuj ponownie.");
+            }
+        }
+
+        scanner.close();
     }
 }
