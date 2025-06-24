@@ -1,0 +1,12 @@
+# Pliki binarne Javy
+bin/
+
+# Pliki tymczasowe edytorów
+*.class
+*.log
+*.tmp
+*.swp
+
+# Katalogi IDE
+.idea/
+.vscode/
