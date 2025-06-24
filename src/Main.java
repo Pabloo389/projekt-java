@@ -4,5 +4,7 @@ public class Main {
 
 	System.out.println("Nowa funkcjonalność.");
 
+	System.out.println("Dodano jeszcze jedną funkcjonalność.");
+
     }
 }
