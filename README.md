@@ -1,31 +1,78 @@
-# Projekt Java
+# Projekt Java - Kalkulator
 
-## Opis
+Prosty projekt kalkulatora w Javie z testami jednostkowymi i integracyjnymi.
 
-Ten projekt to przykładowa aplikacja Java zainicjowana w celu nauki Gita i GitHuba.
+## Spis treści
+
+- [Opis projektu](#opis-projektu)
+- [Struktura katalogów](#struktura-katalogów)
+- [Wymagania](#wymagania)
+- [Instrukcje](#instrukcje)
+  - [Uruchomienie testów jednostkowych](#uruchomienie-testów-jednostkowych)
+  - [Uruchomienie testów integracyjnych](#uruchomienie-testów-integracyjnych)
+- [Nowe funkcje](#nowe-funkcje)
+- [Autor](#autor)
+
+## Opis projektu
+
+Jest to prosty kalkulator napisany w Javie, który obsługuje podstawowe działania matematyczne, takie jak dodawanie, odejmowanie, mnożenie, dzielenie i modulo. Projekt zawiera testy jednostkowe i integracyjne napisane z użyciem JUnit 4.
 
 ## Struktura katalogów
 
-```
-projekt-java/
-├── src/         # kod źródłowy
-├── bin/         # pliki binarne
-├── .gitignore   # plik ignorujący
-└── README.md    # dokumentacja projektu
-```
-
-## Uruchomienie
-
-```bash
-javac -d bin src/Main.java
-java -cp bin Main
-```
+- `src/` - kod źródłowy kalkulatora
+- `tests/` - testy jednostkowe i integracyjne
+- `lib/` - biblioteki (np. JUnit)
 
 ## Wymagania
 
-- Java 11+
-- Git
-- Terminal
+- Java 11 lub nowsza
+- JUnit 4 (umieszczony w katalogu `lib/`)
+
+## Instrukcje
+
+### Uruchomienie testów jednostkowych
+
+1. Skompiluj kod źródłowy:
+
+```sh
+javac -d . src/*.java
+```
+
+2. Skompiluj testy:
+
+```sh
+javac -cp ".;lib/*" -d . tests/CalculatorTest.java
+```
+
+3. Uruchom testy:
+
+```sh
+java -cp ".;lib/*" org.junit.runner.JUnitCore CalculatorTest
+```
+
+### Uruchomienie testów integracyjnych
+
+1. Skompiluj testy integracyjne:
+
+```sh
+javac -cp ".;lib/*" -d . tests/CalculatorIntegrationTest.java
+```
+
+2. Uruchom testy integracyjne:
+
+```sh
+java -cp ".;lib/*" org.junit.runner.JUnitCore CalculatorIntegrationTest
+```
+
+## Nowe funkcje
+
+W projekcie zostały dodane metody:
+- `subtract(int a, int b)` - odejmowanie
+- `multiply(int a, int b)` - mnożenie
+- `divide(int a, int b)` - dzielenie (z obsługą dzielenia przez zero)
+- `modulus(int a, int b)` - modulo (z obsługą dzielenia przez zero)
+
+Wszystkie metody mają pełne pokrycie testami jednostkowymi.
 
 ## Autor
 

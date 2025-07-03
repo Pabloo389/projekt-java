@@ -24,5 +24,15 @@ public class Calculator {
         }
         return a % b;
     }
+    public int power(int base, int exponent) {
+    	if (exponent == 0) {
+        return 1;
+        }
+    	int result = 1;
+    		for (int i = 0; i < exponent; i++) {
+        result *= base;
+    	}
+    return result;
+    }
 }
 
