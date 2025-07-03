@@ -1,0 +1,31 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main, ci-setup ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Compile sources
+      run: javac -d . src/*.java
+
+    - name: Compile tests
+      run: javac -cp ".:lib/*" -d . tests/*.java
+
+    - name: Run tests
+      run: java -cp ".:lib/*" org.junit.runner.JUnitCore CalculatorTest
