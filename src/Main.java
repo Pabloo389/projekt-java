@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-	System.out.println("=== HEADER A i B ===");
     public static void main(String[] args) {
+	System.out.println("=== HEADER A i B ===");
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
