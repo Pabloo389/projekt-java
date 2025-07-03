@@ -71,6 +71,7 @@ W projekcie zostały dodane metody:
 - `multiply(int a, int b)` - mnożenie
 - `divide(int a, int b)` - dzielenie (z obsługą dzielenia przez zero)
 - `modulus(int a, int b)` - modulo (z obsługą dzielenia przez zero)
+- `power(int base, int exponent)` - potęgowanie liczby całkowitej (np. power(2, 3) zwraca 8)
 
 Wszystkie metody mają pełne pokrycie testami jednostkowymi.
 
