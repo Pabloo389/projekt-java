@@ -19,12 +19,18 @@ Jest to prosty kalkulator napisany w Javie, który obsługuje podstawowe działa
 
 ## CI / GitHub Actions
 
-Repozytorium posiada **automatyczny pipeline CI (GitHub Actions)** uruchamiający:
-✅ Kompilację projektu  
-✅ Kompilację testów jednostkowych  
-✅ Uruchomienie testów jednostkowych JUnit
+Repozytorium posiada **automatyczny pipeline CI/CD (GitHub Actions):**
 
-Pipeline uruchamia się automatycznie przy każdym **push i pull request** na gałęzie `main` oraz `ci-setup`.
+✅ **CI pipeline:**
+- Kompilacja projektu przy każdym push i pull request
+- Kompilacja testów jednostkowych
+- Uruchamianie testów jednostkowych JUnit
+
+✅ **CD pipeline:**
+- Automatyczne "wdrożenie" po przejściu testów na gałęzi `main`
+- Symulacja uruchomienia aplikacji i health check
+
+Pipeline działa automatycznie przy każdym **push i PR na `main`**.
 
 ## Struktura katalogów
 
