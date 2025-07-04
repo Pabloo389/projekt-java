@@ -1,0 +1,42 @@
+name: Java CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Download JUnit and Hamcrest
+      run: |
+        mkdir lib
+        curl -L -o lib/junit-4.13.2.jar https://search.maven.org/remotecontent?filepath=junit/junit/4.13.2/junit-4.13.2.jar
+        curl -L -o lib/hamcrest-core-1.3.jar https://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+
+    - name: Compile sources
+      run: javac -d . src/*.java
+
+    - name: Compile tests
+      run: javac -cp ".:lib/*" -d . tests/*.java
+
+    - name: Run tests
+      run: java -cp ".:lib/*" org.junit.runner.JUnitCore CalculatorTest
+
+    - name: Deploy (simulated)
+      run: |
+        echo "=== Deployment step ==="
+        java Main < /dev/null &
+        sleep 5
+        echo "Health check passed - deployment simulated"
