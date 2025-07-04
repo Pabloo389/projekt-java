@@ -79,6 +79,17 @@ javac -cp ".;lib/*" -d . tests/CalculatorIntegrationTest.java
 java -cp ".;lib/*" org.junit.runner.JUnitCore CalculatorIntegrationTest
 ```
 
+## Workflow pracy
+
+Projekt rozwijany zgodnie z workflow:
+1. Tworzenie gałęzi feature (`feature/...`)
+2. Implementacja funkcji metodą TDD (najpierw testy, potem kod)
+3. Aktualizacja dokumentacji (`README.md`, `CHANGELOG.md`)
+4. Tworzenie pull request
+5. Code review i poprawki
+6. Scalanie do `main`
+7. Tagowanie nowej wersji i tworzenie release na GitHub
+
 ## Nowe funkcje
 
 W projekcie zostały dodane metody:
