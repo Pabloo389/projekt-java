@@ -17,6 +17,15 @@ Prosty projekt kalkulatora w Javie z testami jednostkowymi i integracyjnymi.
 
 Jest to prosty kalkulator napisany w Javie, który obsługuje podstawowe działania matematyczne, takie jak dodawanie, odejmowanie, mnożenie, dzielenie i modulo. Projekt zawiera testy jednostkowe i integracyjne napisane z użyciem JUnit 4.
 
+## CI / GitHub Actions
+
+Repozytorium posiada **automatyczny pipeline CI (GitHub Actions)** uruchamiający:
+✅ Kompilację projektu  
+✅ Kompilację testów jednostkowych  
+✅ Uruchomienie testów jednostkowych JUnit
+
+Pipeline uruchamia się automatycznie przy każdym **push i pull request** na gałęzie `main` oraz `ci-setup`.
+
 ## Struktura katalogów
 
 - `src/` - kod źródłowy kalkulatora
